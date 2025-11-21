@@ -27,4 +27,4 @@ export const MOCK_USER_PRESETS: Record<Role, string> = {
 };
 
 // Replace this with your deployed Google Apps Script Web App URL
-export const GOOGLE_SCRIPT_URL = "";
+export const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyNjKiLF4ieoer1qt-v0R1ktEaBw7nXKS4CO3MyG8I7OBon3sGfGcJ5hrM1SQCIryl0kg/exec";
