@@ -26,5 +26,7 @@ export const MOCK_USER_PRESETS: Record<Role, string> = {
   [Role.CEO]: "Mr. Anderson (CEO)"
 };
 
-// Replace this with your deployed Google Apps Script Web App URL
-export const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyNjKiLF4ieoer1qt-v0R1ktEaBw7nXKS4CO3MyG8I7OBon3sGfGcJ5hrM1SQCIryl0kg/exec";
+// 1. Tries to get URL from Vercel Environment Variables
+// 2. Falls back to the hardcoded string if not found
+// Replace the string below with your Web App URL if you are running locally
+export const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbyNjKiLF4ieoer1qt-v0R1ktEaBw7nXKS4CO3MyG8I7OBon3sGfGcJ5hrM1SQCIryl0kg/exec";
