@@ -11,8 +11,9 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     define: {
       // This enables process.env.API_KEY to work in the browser
-      'process.env.API_KEY': JSON.stringify(env.VITE_API_KEY),
-      'process.env.GOOGLE_SCRIPT_URL': JSON.stringify(env.VITE_GOOGLE_SCRIPT_URL),
+      // We add || "" to ensure it doesn't crash if the variable is missing
+      'process.env.API_KEY': JSON.stringify(env.VITE_API_KEY || ""),
+      'process.env.GOOGLE_SCRIPT_URL': JSON.stringify(env.VITE_GOOGLE_SCRIPT_URL || ""),
     },
   };
 })
